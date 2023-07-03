@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password</title>
+    <link rel="stylesheet" href="contra.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+    <script type="text/javascript">
+		function combrobarClave(){
+			clave1=document.fl.clave1.value
+			clave2=document.fl.clave2.value
+			if (clave1 == "admin" && clave2=="conejo"){
+				alert("Los Datos Coinciden...\n Bienvenido");
+				var href="cursos.html";
+				window.location=href;
+			}
+			else{
+				alert("Las dos claves son distintas...\n intentelo nuevamente");
+				var href="contra.html";
+				window.location=href;
+
+			};
+		}
+	</script>
+
+</head>
+<body>
+   <section>
+    <div class="form-box">
+        <div class="form-value">
+            <form action="" name="fl">
+                <h2>Login</h2>
+                <div class="inputbox">
+                    <ion-icon name="person-circle-outline"></ion-icon>
+                    <input type="user" required  name="clave1" placeholder="usuario">
+                    <label for="user">user</label>
+                </div>
+                <div class="inputbox">
+                    <ion-icon name="lock-closed-outline"></ion-icon>
+                    <input type="password" required name="clave2" placeholder="password">
+                    <label for="">Password</label>
+                </div>
+                <div class="forget">
+                    <label for=""><input type="checkbox">Remember me</label>
+                    <a href="#">Forget password</a>
+                </div>
+               <center> <input type="button" value="ingresar" class="btn btn-outline-primary" onclick="combrobarClave()"></center>
+            </form>
+        </div>
+    </div>
+   </section>
+   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    
+</body>
+</html>
